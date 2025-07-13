@@ -5,7 +5,7 @@ import { useFetchAndLoad } from "../../hooks/useFetchAndLoad";
 import { useAsync } from "../../hooks/useAsync";
 import { Header } from "../../components/Header/Header";
 import { MovieCard } from "../../components/MovieCard/MovieCard";
-import { MovieCartSkeleton } from "../../components/MovieCartSkeleton/MovieCartSkeleton";
+import { MovieCardSkeleton } from "../../components/MovieCardSkeleton/MovieCardSkeleton";
 
 export default function SearchMoviePage() {
 
@@ -32,18 +32,18 @@ export default function SearchMoviePage() {
             <main className="w-4/5 mx-auto flex flex-wrap gap-10 justify-between">
 
                 {loading ? (<>
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
                 </>) : movies.length <= 0 ? <p className="font-semibold text-lg">There are no movies to show</p> : movies.map((movie) => (
                     <MovieCard key={movie.id} movie_id={movie.id} poster_path={movie.poster_path} />
                 ))
