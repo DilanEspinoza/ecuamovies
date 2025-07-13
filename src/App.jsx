@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router"
-// import Home from "./pages/Home/Home"
 import MoviePage from "./pages/MoviePage/MoviePage"
 import Home from "./pages/Home/Home"
 import { createContext, useState } from "react"
