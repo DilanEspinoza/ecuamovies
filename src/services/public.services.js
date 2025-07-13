@@ -8,7 +8,7 @@ const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
 export const getMoviesByCategory = (category = "popular") => {
 	const controller = loadAbort();
 	const config = {
-		...options, // headers y method
+		...options,
 		signal: controller.signal,
 	};
 	return {
@@ -23,7 +23,7 @@ export const getMoviesByCategory = (category = "popular") => {
 export const getSingleMovie = (movie_id) => {
 	const controller = loadAbort();
 	const config = {
-		...options, // headers y method
+		...options,
 		signal: controller.signal,
 	};
 	return {
@@ -38,7 +38,7 @@ export const getSingleMovie = (movie_id) => {
 export const getSearchMovies = (query) => {
 	const controller = loadAbort();
 	const config = {
-		...options, // headers y method
+		...options,
 		signal: controller.signal,
 		params: { query },
 	};
@@ -50,16 +50,3 @@ export const getSearchMovies = (query) => {
 		controller,
 	};
 };
-
-/* 
-export const getSimilarMovies = (movie_id) => {
-	const controller = loadAbort();
-	return {
-		call: axios.get(
-			`${VITE_BASE_URL}/movie/${movie_id}/similar?language=en-US&page=1`,
-			{ signal: controller.signal }
-		),
-		controller,
-	};
-};
- */
