@@ -8,7 +8,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useNavigate } from "react-router";
 
-import { MovieCartSkeleton } from "../../components/MovieCartSkeleton/MovieCartSkeleton";
+import { MovieCardSkeleton } from "../../components/MovieCardSkeleton/MovieCardSkeleton";
 
 export default function Home() {
     const [searchInputMovie, setSearchInputMovie] = useState("")
@@ -80,18 +80,18 @@ export default function Home() {
             <main className=" flex flex-wrap gap-10 justify-between">
 
                 {loading ? (<>
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
-                    <MovieCartSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
+                    <MovieCardSkeleton />
                 </>) : movies.length <= 0 ? <p className="font-semibold text-lg">There are no movies to show</p> : movies.map((movie) => (
                     <MovieCard key={movie.id} movie_id={movie.id} poster_path={movie.poster_path} />
                 ))
